@@ -141,7 +141,7 @@ where
 
         let mut prepared = cxn
             .prepare(&format!(
-                "SELECT * FROM {} LIMIT 1",
+                "SELECT * FROM {} WHERE 1=0",
                 table_reference.to_quoted_string()
             ))
             .boxed()
